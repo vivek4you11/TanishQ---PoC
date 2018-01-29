@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color: #fff;
+    font:normal 16px/1.5 sans-serif;
+    color: #333;
+}
+
+.middle {
+    height: 200px;
+}
+
+.middle1 {
+    height: 32px;
+    width: 110px; 
+    padding-left: 10px;
+}
+h2{
+    text-align: center
+}
+
+h3{
+    font: normal 32px/1.5 'Open Sans', sans-serif;
+    color: #2c3e50;
+    margin: 50px 0;
+    text-align: center;
+}
+
+#output {
+    display: none;
+}
+
+#output1 {
+    display: flex;
+}
+
+.car {
+    display: inline-block;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ff75ac;
+}
+
+#tanishq_logo {
+    padding: 5px;
+}
+#main {
+    display: flex;
+    width: 400px;
+    height: 220px; 
+    margin: 0 auto;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 4px 4px 10px 2px rgba(0,0,0,0.3);
+    background: radial-gradient(rgb(225,197,65), rgb(157,120,18));
+  }
+  
+  #image {
+    position: absolute;
+    width: 150px;
+    height: 73px;
+    bottom: 2px;
+    right: 10px;
+  }
+  
+  .photo {
+    padding:10px;
+    width: 100%;
+    height: 110px;
+  }
+
+  #barcode {
+      padding: 10px 12px;
+      width: 100%;
+  }
+  
+  #text {
+    line-height: 40px;
+    font-family: serif;
+  }
+
+  .text-name {
+      padding-left: 15px; 
+      font-weight: 600;
+  }
+
+  #left-div {
+    width: 30%;
+    /*background-color: green;*/
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  
+  #right-div {
+    width: 70%;
+    /*background-color: yellow;*/
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  
+  #left-one {
+    height: 70px;
+    /* background-color: pink; */
+    border-top-left-radius: 15px;
+  }
+  
+  #left-two {
+    height: 110px;
+    /* background-color: blue; */
+  }
+  
+  #left-three {
+    height: 40px;
+    width: 100%;
+    /* background-color: brown; */
+    border-bottom-left-radius: 15px;
+  }
+  
+  #right-one {
+    height: 40px;
+    /* background-color: grey; */
+    border-top-right-radius: 15px;
+  }
+  
+  #right-two {
+    height: 50px;
+    /* background-color: purple; */
+  }
+  
+  #right-three {
+    height: 130px;
+    /* background-color: orange; */
+    border-bottom-right-radius: 15px;
+    position: relative;
+  } 
+
+.app{
+    width: 100%;
+    position: relative;
+}
+
+.app #start-camera{
+    display: none;
+    border-radius: 3px;
+    max-width: 400px;
+    color: #fff;
+    background-color: #448AFF;
+    text-decoration: none;
+    padding: 15px;
+    opacity: 0.8;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.app video#camera-stream{
+    display: none;
+    width: 100%;
+}
+
+.app img#snap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    display: none;
+}
+
+.app img#snapone{ 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    display: none;
+}
+
+.app #error-message{
+    width: 100%;
+    background-color: #ccc;
+    color: #9b9b9b;
+    font-size: 28px;
+    padding: 200px 100px;
+    text-align: center;
+    display: none;
+}
+
+.app .controls{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 30px;
+    display: none;
+}
+
+.app .controls a{
+    border-radius: 50%;
+    color: #fff;
+    background-color: #111;
+    text-decoration: none;
+    padding: 15px;
+    line-height: 0;
+    opacity: 0.7;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.app .controls a:hover{
+    opacity: 1;
+}
+
+.app .controls a.disabled{
+    background-color: #555;
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+}
+
+.app .controls a.disabled:hover{
+    opacity: 0.5;
+}
+
+.app .controls a i{
+    font-size: 18px;
+}
+
+.app .controls #take-photo i{
+    font-size: 32px;
+}
+
+.app canvas{
+    display: none;
+}
+
+
+
+.app video#camera-stream.visible,
+.app img#snap.visible,
+.app #error-message.visible
+{
+    display: block;
+}
+
+.app .controls.visible{
+    display: flex;
+}
+
+.wrapper {
+  position: relative;
+  width:100%;
+  height: 110px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.signature-pad {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width:100%;
+  height:100px;
+  background-color: white;
+}
+
+@media(max-width: 1000px){
+    .container{
+        margin: 40px;
+    }
+
+    .app #start-camera.visible{
+        display: block;
+    }
+
+    .app .controls a i{
+        font-size: 16px;
+    }
+
+    .app .controls #take-photo i{
+        font-size: 24px;
+    }
+}
+
+
+@media(max-width: 600px){
+    .container{
+        margin: 10px;
+    }
+
+    .app #error-message{
+        padding: 80px 50px;
+        font-size: 18px;
+    }
+
+    .app .controls a i{
+        font-size: 12px;
+    }
+
+    .app .controls #take-photo i{
+        font-size: 18px;
+    }
+}
+
