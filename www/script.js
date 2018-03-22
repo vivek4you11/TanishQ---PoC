@@ -133,6 +133,10 @@ document.getElementById('save-jpeg').addEventListener('click', function () {
   if (signaturePad.isEmpty()) {
     return alert("Please provide a signature first.");
   }
+    
+  var name = document.getElementById('enteredName').value;
+  console.log(name);
+  document.getElementById("userName").innerHTML = name;
 
   var data = signaturePad.toDataURL('image/jpeg', 1.0);
 
