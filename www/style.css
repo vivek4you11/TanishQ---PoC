@@ -33,6 +33,26 @@ h3{
     text-align: center;
 }
 
+.printButton {
+    margin-left: 45%;
+    width: 100px;
+    margin-top: 15px;
+}
+
+@media print {
+    body * {
+      visibility: hidden;
+    }
+    #main, #main * {
+      visibility: visible;
+    }
+    #main {
+      position: absolute;
+      left: 20%;
+      top: 0;
+    }
+  }
+
 #output {
     display: none;
 }
